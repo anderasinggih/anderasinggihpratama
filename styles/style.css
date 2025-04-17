@@ -95,7 +95,7 @@ a {
   letter-spacing: 0.1rem;
   color: var(--secondaryTextColor);
   position: relative;
-  padding-left: 40px;
+
   width: fit-content;
   font-weight: 400;
   font-size: 0.9rem;
@@ -185,11 +185,19 @@ nav ul li a {
   justify-self: center;
   width: 40%;
   padding-bottom: 1rem;
+  display: flex;
+  justify-content: center; /* biar gambar di tengah */
 }
 
-.hero-right {
-  display: flex;
-  justify-content: center;
+.hero-right img {
+  width: 100%; /* default: full lebar kontainernya */ /* biar ga kegedean di HP */
+}
+
+@media (min-width: 768px) {
+  .hero-right img {
+    width: 150%;
+    /* perkecil di desktop */
+  }
 }
 
 /* Services Section */
